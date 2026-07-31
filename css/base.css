@@ -71,6 +71,13 @@ body.portfolio-body {
   font-size: 0.9rem;
 }
 
+.portfolio-project-card__appeal {
+  margin: 0 0 calc(var(--spacing-unit) * 1) 0;
+  color: var(--color-text);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
 .portfolio-project-card__languages {
   list-style: none;
   display: flex;
