@@ -1,16 +1,16 @@
 :root {
-  --color-background: #f5f1ed;
-  --color-surface: #ebe5dd;
-  --color-text: #3d3530;
-  --color-text-muted: #7a6f66;
-  --color-accent: #a67c52;
-  --color-border: #d4ccc2;
-  --font-family-base: "Georgia", "Hiragino Mincho ProN", serif;
-  --radius-base: 8px;
-  --spacing-unit: 14px;
+  --color-background: #fef5f9;
+  --color-surface: #fff0f7;
+  --color-text: #5a3d52;
+  --color-text-muted: #9b8a95;
+  --color-accent: #ff9ec9;
+  --color-border: #f5d9ed;
+  --font-family-base: "Hiragino Maru Gothic ProN", "Rounded Mplus 1c", sans-serif;
+  --radius-base: 18px;
+  --spacing-unit: 10px;
   --layout-align: center;
   --font-size-base: 16px;
   --line-height-base: 1.8;
-  --container-width: 900px;
+  --container-width: 850px;
   --grid-columns: 2;
 }
