@@ -17,19 +17,31 @@ body.portfolio-body {
   line-height: var(--line-height-base, 1.6);
 }
 
-.portfolio-header {
-  padding: calc(var(--spacing-unit, 8px) * 6) 0;
-}
-
-/* 本文（.portfolio-main）と同じ幅・同じ左右パディングにする。
-   横パディングを .portfolio-header ではなくここに置くことで、
-   左揃えにしたとき名前・自己紹介・Projects見出しの左端が一致する。 */
-.portfolio-header__inner {
+/*
+ * レイアウト構成（body[data-layout]）の実装方針:
+ *
+ * ヘッダー・SNS・スキル・本文・フッターを .portfolio-page の直下（＝兄弟要素）
+ * にし、.portfolio-page を1本のFlexboxにすることで、各セクションの見た目上の
+ * 並び順を CSS の order だけで入れ替えられるようにしている。HTML自体の生成順は
+ * 変えず、data-layout属性ごとに一部の order / position を上書きする。
+ *
+ * 各セクションの既定 order:
+ *   1: .portfolio-header   2: .portfolio-skills   3: .portfolio-socials
+ *   4: .portfolio-main     100: .portfolio-footer（常に最後に固定）
+ */
+.portfolio-page {
   max-width: var(--container-width, 960px);
   margin: 0 auto;
   padding: 0 calc(var(--spacing-unit, 8px) * 3);
-  /* GitHubアイコンの絶対配置の基準になる */
+  /* 絶対配置になっている .portfolio-socials（standard/skills-bottom時）の基準 */
   position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio-header {
+  order: 1;
+  padding-top: calc(var(--spacing-unit, 8px) * 6);
 }
 
 /* var() の第2引数は既定値（フォールバック）。
@@ -51,12 +63,15 @@ body.portfolio-body {
   white-space: pre-line;
 }
 
-/* SNS・GitHubアイコンはヘッダー右上に固定する。
-   名前や自己紹介の揃え方（--header-*-align / --layout-align）に
-   影響されないよう、通常の流れから外して配置している。 */
+/* 既定（data-layout="standard" / "skills-bottom"）ではヘッダー右上に固定する。
+   .portfolio-page が position:relative の基準になっており、
+   topはヘッダーの上padding分だけ ずらして名前の高さに合わせている。
+   socials-inline時はこのpositionを打ち消してFlexboxの通常フローに戻す
+   （下の body[data-layout="socials-inline"] 参照）。 */
 .portfolio-socials {
+  order: 3;
   position: absolute;
-  top: 0;
+  top: calc(var(--spacing-unit, 8px) * 6);
   right: calc(var(--spacing-unit, 8px) * 3);
   display: inline-flex;
   align-items: center;
@@ -79,6 +94,7 @@ body.portfolio-body {
 }
 
 .portfolio-skills {
+  order: 2;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
@@ -112,10 +128,12 @@ body.portfolio-body {
   flex-shrink: 0;
 }
 
+/* 幅の制約は親の .portfolio-page が担うため、ここでは持たない
+   （.portfolio-skills / .portfolio-socials など他の兄弟要素と横幅を揃えるため）。 */
 .portfolio-main {
-  max-width: var(--container-width, 960px);
-  margin: 0 auto;
-  padding: 0 calc(var(--spacing-unit, 8px) * 3) calc(var(--spacing-unit, 8px) * 6);
+  order: 4;
+  margin-top: calc(var(--spacing-unit, 8px) * 6);
+  padding-bottom: calc(var(--spacing-unit, 8px) * 2);
 }
 
 .portfolio-projects__title {
@@ -193,9 +211,29 @@ body.portfolio-body {
   color: var(--color-text-muted, #6b6b6b);
 }
 
+/* orderを100にして、どのdata-layoutパターンでも必ず最後に来るようにする。 */
 .portfolio-footer {
+  order: 100;
   text-align: center;
-  padding: calc(var(--spacing-unit, 8px) * 3);
+  margin-top: calc(var(--spacing-unit, 8px) * 3);
+  padding: calc(var(--spacing-unit, 8px) * 3) 0;
   color: var(--color-text-muted, #6b6b6b);
   font-size: 0.8rem;
+}
+
+/* ===== レイアウト構成の切り替え ===== */
+
+/* skills-bottom: スキルをリポジトリ一覧（order:4）の後ろ・フッター（order:100）の
+   前に移動する。ヘッダー直下ではなくなるため、スキル自身の上マージンも
+   ヘッダーからの間隔ではなくProjectsからの間隔に合わせて調整する。 */
+body[data-layout="skills-bottom"] .portfolio-skills {
+  order: 5;
+  margin-top: calc(var(--spacing-unit, 8px) * 6);
+}
+
+/* socials-inline: 絶対配置をやめて通常のFlexboxの流れに戻す。
+   order:3のまま（スキルの後・本文の前）なので、位置を再指定する必要はない。 */
+body[data-layout="socials-inline"] .portfolio-socials {
+  position: static;
+  margin: calc(var(--spacing-unit, 8px) * 2) 0 0 0;
 }

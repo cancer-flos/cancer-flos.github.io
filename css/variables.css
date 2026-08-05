@@ -2,14 +2,14 @@
   --color-background: #0d0221;
   --color-surface: #1a0033;
   --color-text: #00ff88;
-  --color-text-muted: #00cc6a;
+  --color-text-muted: #00cc66;
   --color-accent: #ff006e;
   --color-border: #3a0052;
-  --font-family-base: "IBM Plex Mono", "Courier New", monospace;
+  --font-family-base: "IBM Plex Mono", "Courier New", "Hiragino Kaku Gothic ProN", monospace;
   --radius-base: 0px;
   --spacing-unit: 10px;
   --layout-align: left;
-  --font-size-base: 16px;
+  --font-size-base: 14px;
   --line-height-base: 1.5;
   --container-width: 1200px;
   --grid-columns: 4;

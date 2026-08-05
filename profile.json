@@ -12,5 +12,6 @@
       "platform": "twitter",
       "url": "https://x.com/home"
     }
-  ]
+  ],
+  "layoutPattern": "socials-inline"
 }
