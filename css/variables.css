@@ -1,16 +1,16 @@
 :root {
-  --color-background: #fff9e6;
-  --color-surface: #fffaed;
-  --color-text: #2d2416;
-  --color-text-muted: #7a6f63;
-  --color-accent: #ff6b9d;
-  --color-border: #f0e4d0;
-  --font-family-base: "Hiragino Maru Gothic ProN", "Rounded Mplus 1c", sans-serif;
-  --radius-base: 16px;
-  --spacing-unit: 8px;
+  --color-background: #0d0221;
+  --color-surface: #1a0033;
+  --color-text: #00ff88;
+  --color-text-muted: #00cc66;
+  --color-accent: #ff006e;
+  --color-border: #3a0066;
+  --font-family-base: "IBM Plex Mono", "Courier New", "Hiragino Kaku Gothic ProN", monospace;
+  --radius-base: 0px;
+  --spacing-unit: 10px;
   --layout-align: left;
-  --font-size-base: 16px;
-  --line-height-base: 1.7;
-  --container-width: 900px;
-  --grid-columns: 2;
+  --font-size-base: 15px;
+  --line-height-base: 1.5;
+  --container-width: 1200px;
+  --grid-columns: 4;
 }

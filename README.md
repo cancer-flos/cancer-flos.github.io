@@ -24,9 +24,15 @@
 ```json
 {
   "displayName": "表示名",
-  "tagline": "自己紹介"
+  "tagline": "自己紹介",
+  "skills": ["React", "TypeScript", "Next.js"],
+  "socialLinks": [
+    { "platform": "twitter", "url": "https://x.com/example" }
+  ]
 }
 ```
+
+`socialLinks` の `platform` は `twitter` / `github` / `zenn` / `qiita` / `other` のいずれかです。それ以外の値やhttp(s)以外のURLは表示されません。
 
 blank folio の入力欄から変更するのが簡単ですが、このファイルを直接編集しても構いません。**入力欄を空のまま生成した場合、ここに保存されている内容がそのまま使われます**（消えません）。
 

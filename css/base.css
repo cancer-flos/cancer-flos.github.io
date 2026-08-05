@@ -51,25 +51,53 @@ body.portfolio-body {
   white-space: pre-line;
 }
 
-/* GitHubアイコンはヘッダー右上に固定する。
+/* SNS・GitHubアイコンはヘッダー右上に固定する。
    名前や自己紹介の揃え方（--header-*-align / --layout-align）に
    影響されないよう、通常の流れから外して配置している。 */
-.portfolio-header__github {
+.portfolio-socials {
   position: absolute;
   top: 0;
   right: calc(var(--spacing-unit, 8px) * 3);
+  display: inline-flex;
+  align-items: center;
+  gap: calc(var(--spacing-unit, 8px) * 1.5);
+}
+
+.portfolio-socials__link {
   display: inline-flex;
   color: var(--color-text, #1a1a1a);
   transition: opacity 0.2s;
 }
 
-.portfolio-header__github svg {
+.portfolio-socials__link svg {
   display: block;
   fill: currentColor;
 }
 
-.portfolio-header__github:hover {
+.portfolio-socials__link:hover {
   opacity: 0.6;
+}
+
+.portfolio-skills {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  /* left/center/right はjustify-contentの値としてもそのまま有効なため、
+     --layout-align をヘッダー文字列と同じ変数で揃えられる。 */
+  justify-content: var(--layout-align, left);
+  gap: calc(var(--spacing-unit, 8px) * 1);
+  margin: calc(var(--spacing-unit, 8px) * 2) 0 0 0;
+  padding: 0;
+}
+
+.portfolio-skill-badge {
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: calc(var(--spacing-unit, 8px) * 0.5) calc(var(--spacing-unit, 8px) * 1.25);
+  border-radius: var(--radius-base, 8px);
+  background: var(--color-surface, #f5f5f5);
+  border: 1px solid var(--color-border, #e5e5e5);
+  color: var(--color-text, #1a1a1a);
 }
 
 .portfolio-main {
