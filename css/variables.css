@@ -1,10 +1,10 @@
 :root {
-  --color-background: #121212;
-  --color-surface: #1e1e1e;
-  --color-text: #e8e8e8;
-  --color-text-muted: #9e9e9e;
-  --color-accent: #bb86fc;
-  --color-border: #404040;
-  --font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", sans-serif;
-  --radius-base: 8px;
+  --color-background: #f5f1ed;
+  --color-surface: #ebe5df;
+  --color-text: #3d3530;
+  --color-text-muted: #8b7d73;
+  --color-accent: #c17a6b;
+  --color-border: #d4ccc3;
+  --font-family-base: "Georgia", "Hiragino Mincho ProN", serif;
+  --radius-base: 12px;
 }
