@@ -2,12 +2,19 @@
   box-sizing: border-box;
 }
 
+/* remは <html> の font-size が基準になる。ここを --font-size-base で
+   動かすことで、2rem/1.1rem/0.9rem など本文中のrem指定がすべて連動して
+   拡大縮小する（bodyのfont-sizeを変えるだけではremには効かないため）。 */
+html {
+  font-size: var(--font-size-base, 16px);
+}
+
 body.portfolio-body {
   margin: 0;
   background: var(--color-background, #ffffff);
   color: var(--color-text, #1a1a1a);
   font-family: var(--font-family-base, "Helvetica Neue", Arial, "Hiragino Sans", sans-serif);
-  line-height: 1.6;
+  line-height: var(--line-height-base, 1.6);
 }
 
 .portfolio-header {
@@ -18,34 +25,35 @@ body.portfolio-body {
    横パディングを .portfolio-header ではなくここに置くことで、
    左揃えにしたとき名前・自己紹介・Projects見出しの左端が一致する。 */
 .portfolio-header__inner {
-  max-width: 960px;
+  max-width: var(--container-width, 960px);
   margin: 0 auto;
   padding: 0 calc(var(--spacing-unit, 8px) * 3);
   /* GitHubアイコンの絶対配置の基準になる */
   position: relative;
 }
 
-/* var() の第2引数は既定値。
-   variables.css は再生成時に保護されるため、この機能より前に生成された
-   サイトの variables.css には --header-*-align が存在しない。
-   既定値が無いと text-align の指定ごと無効になり、意図しない揃え方になる。 */
+/* var() の第2引数は既定値（フォールバック）。
+   --header-name-align / --header-tagline-align は名前・自己紹介だけ個別に
+   揃え方を変えたいときの任意指定で、無ければ --layout-align に従い、
+   --layout-align も無ければ left になる（この機能より前に生成された
+   サイトの variables.css にはどちらも存在しないため、最終的な既定値が必要）。 */
 .portfolio-header__name {
   margin: 0 0 calc(var(--spacing-unit, 8px) * 1) 0;
   font-size: 2rem;
-  text-align: var(--header-name-align, left);
+  text-align: var(--header-name-align, var(--layout-align, left));
 }
 
 .portfolio-header__tagline {
   margin: 0;
   color: var(--color-text-muted, #6b6b6b);
-  text-align: var(--header-tagline-align, left);
+  text-align: var(--header-tagline-align, var(--layout-align, left));
   /* 自己紹介の改行をそのまま表示する */
   white-space: pre-line;
 }
 
 /* GitHubアイコンはヘッダー右上に固定する。
-   名前や自己紹介の揃え方（--header-*-align）に影響されないよう、
-   通常の流れから外して配置している。 */
+   名前や自己紹介の揃え方（--header-*-align / --layout-align）に
+   影響されないよう、通常の流れから外して配置している。 */
 .portfolio-header__github {
   position: absolute;
   top: 0;
@@ -65,13 +73,14 @@ body.portfolio-body {
 }
 
 .portfolio-main {
-  max-width: 960px;
+  max-width: var(--container-width, 960px);
   margin: 0 auto;
   padding: 0 calc(var(--spacing-unit, 8px) * 3) calc(var(--spacing-unit, 8px) * 6);
 }
 
 .portfolio-projects__title {
   margin-bottom: calc(var(--spacing-unit, 8px) * 2);
+  text-align: var(--layout-align, left);
 }
 
 .portfolio-projects__list {
@@ -79,8 +88,17 @@ body.portfolio-body {
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: repeat(var(--grid-columns, 2), 1fr);
   gap: calc(var(--spacing-unit, 8px) * 2);
+}
+
+/* --grid-columns は固定列数のため、狭い画面でそのまま使うとカードが
+   潰れる。AIがどんな列数を選んでも崩れないよう、モバイル幅では
+   強制的に1列に戻す（レイアウト崩壊防止のための安全策）。 */
+@media (max-width: 640px) {
+  .portfolio-projects__list {
+    grid-template-columns: 1fr;
+  }
 }
 
 .portfolio-project-card {
