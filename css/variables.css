@@ -1,13 +1,13 @@
 :root {
-  --color-background: #f5ede0;
-  --color-surface: #ede5d8;
-  --color-text: #3d3228;
-  --color-text-muted: #7a6f63;
-  --color-accent: #c17a5c;
-  --color-border: #d4c4b0;
+  --color-background: #f5ede3;
+  --color-surface: #ebe1d7;
+  --color-text: #3d2817;
+  --color-text-muted: #6b5d52;
+  --color-accent: #c17a4a;
+  --color-border: #d4c4b8;
   --font-family-base: "Georgia", "Hiragino Mincho ProN", serif;
   --radius-base: 8px;
-  --spacing-unit: 12px;
+  --spacing-unit: 14px;
   --layout-align: center;
   --font-size-base: 16px;
   --line-height-base: 1.8;
