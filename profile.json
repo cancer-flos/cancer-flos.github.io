@@ -32,22 +32,16 @@
   "layoutPattern": "skills-bottom",
   "repositories": [
     {
+      "name": "cancer-flos.github.io",
+      "generatedText": "",
+      "appealText": "",
+      "sourceHash": ""
+    },
+    {
       "name": "roomvibe_app",
       "generatedText": "同じ空間にいるユーザー同士がサーバーを介さずBluetoothとWi-Fi Directでチャットするモバイルアプリ。Google Nearby Connections APIを使用し、ホストがメッセージを中継するスター型トポロジーで複数端末を接続する。",
       "appealText": "",
       "sourceHash": "fee64240e783e2023cd09f85a7c85533252cfd9c3d861e018dd9440baa46d7f2"
-    },
-    {
-      "name": "Diary",
-      "generatedText": "",
-      "appealText": "",
-      "sourceHash": ""
-    },
-    {
-      "name": "desktop-tutorial",
-      "generatedText": "",
-      "appealText": "",
-      "sourceHash": ""
     }
   ]
 }
