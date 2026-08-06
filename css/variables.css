@@ -1,10 +1,10 @@
 :root {
   --color-background: #f5ede3;
-  --color-surface: #ebe1d7;
+  --color-surface: #ebe1d5;
   --color-text: #3d2817;
-  --color-text-muted: #6b5d52;
-  --color-accent: #c17a4a;
-  --color-border: #d4c4b8;
+  --color-text-muted: #6b5a4f;
+  --color-accent: #c17a5c;
+  --color-border: #d4c4b0;
   --font-family-base: "Georgia", "Hiragino Mincho ProN", serif;
   --radius-base: 8px;
   --spacing-unit: 14px;
