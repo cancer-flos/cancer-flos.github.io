@@ -6,8 +6,8 @@
     "FastAPI",
     "Node.js",
     "NestJS",
-    "HTML5",
-    "CSS3",
+    "HTML",
+    "CSS",
     "JavaScript",
     "TypeScript",
     "React",
@@ -18,7 +18,7 @@
     "Python",
     "Java",
     "C言語",
-    "(C)MySQL",
+    "MySQL",
     "PostgreSQL",
     "SQLite",
     "Docker"
@@ -32,6 +32,12 @@
   "layoutPattern": "skills-bottom",
   "repositories": [
     {
+      "name": "cancer-flos.github.io",
+      "generatedText": "",
+      "appealText": "",
+      "sourceHash": ""
+    },
+    {
       "name": "roomvibe_app",
       "generatedText": "同じ空間にいるユーザー同士がサーバーを介さずBluetoothとWi-Fiで直接チャットするAndroidアプリ。Google Nearby Connections APIでP2P通信を実現し、スター型トポロジーでホストがメッセージを中継する。",
       "appealText": "",
@@ -39,12 +45,6 @@
     },
     {
       "name": "Diary",
-      "generatedText": "",
-      "appealText": "",
-      "sourceHash": ""
-    },
-    {
-      "name": "cancer-flos.github.io",
       "generatedText": "",
       "appealText": "",
       "sourceHash": ""
