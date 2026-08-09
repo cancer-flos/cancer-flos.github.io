@@ -1,6 +1,6 @@
 {
-  "displayName": "キャンサー",
-  "tagline": "私はBLEでの通信でできるroomを作りました！！",
+  "displayName": "Terminal",
+  "tagline": "中京大学のプログラミングサークルです",
   "skills": [
     "Go",
     "FastAPI",
@@ -32,16 +32,10 @@
   "layoutPattern": "skills-bottom",
   "repositories": [
     {
-      "name": "Diary",
-      "generatedText": "日記を管理するプログラム。",
+      "name": "roomvibe_app",
+      "generatedText": "同じ空間にいる人同士がサーバーを経由せずBluetooth/Wi-Fiで直接チャットできるAndroidアプリ。Google Nearby Connections APIでP2P通信を実現し、スター型トポロジーでホストがメッセージを中継して全員に同期する。",
       "appealText": "",
-      "sourceHash": "cac6caded51d952ce9cc79321144a0efd4d035443b52ca71fea5b26e07b2ba03"
-    },
-    {
-      "name": "cancer-flos.github.io",
-      "generatedText": "",
-      "appealText": "",
-      "sourceHash": ""
+      "sourceHash": "fee64240e783e2023cd09f85a7c85533252cfd9c3d861e018dd9440baa46d7f2"
     }
   ]
 }
