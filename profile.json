@@ -32,19 +32,13 @@
   "layoutPattern": "skills-bottom",
   "repositories": [
     {
-      "name": "roomvibe_app",
-      "generatedText": "同じ空間にいる人同士がサーバーを介さずBluetooth/Wi-Fiで直接チャットできるAndroidアプリ。Google Nearby Connections APIを使ったP2P通信で、ホストがメッセージを中継するスター型トポロジーを採用している。",
+      "name": "Diary",
+      "generatedText": "日記を管理するプログラム。",
       "appealText": "",
-      "sourceHash": "fee64240e783e2023cd09f85a7c85533252cfd9c3d861e018dd9440baa46d7f2"
+      "sourceHash": "cac6caded51d952ce9cc79321144a0efd4d035443b52ca71fea5b26e07b2ba03"
     },
     {
       "name": "cancer-flos.github.io",
-      "generatedText": "",
-      "appealText": "",
-      "sourceHash": ""
-    },
-    {
-      "name": "Diary",
       "generatedText": "",
       "appealText": "",
       "sourceHash": ""
