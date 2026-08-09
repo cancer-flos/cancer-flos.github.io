@@ -1,16 +1,16 @@
 :root {
-  --color-background: #0d0221;
-  --color-surface: #1a0033;
-  --color-text: #00ff88;
-  --color-text-muted: #00cc66;
-  --color-accent: #ff006e;
-  --color-border: #3a0066;
-  --font-family-base: "Courier New", "IBM Plex Mono", monospace;
-  --radius-base: 0px;
-  --spacing-unit: 10px;
-  --layout-align: left;
+  --color-background: #f5e6d3;
+  --color-surface: #ede0cc;
+  --color-text: #3d2817;
+  --color-text-muted: #6b5344;
+  --color-accent: #c17a4a;
+  --color-border: #d4c4b0;
+  --font-family-base: "Georgia", "Hiragino Mincho ProN", serif;
+  --radius-base: 8px;
+  --spacing-unit: 12px;
+  --layout-align: center;
   --font-size-base: 16px;
-  --line-height-base: 1.5;
-  --container-width: 1200px;
-  --grid-columns: 4;
+  --line-height-base: 1.8;
+  --container-width: 900px;
+  --grid-columns: 2;
 }
