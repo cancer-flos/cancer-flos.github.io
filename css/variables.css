@@ -1,16 +1,16 @@
 :root {
-  --color-background: #0d1117;
-  --color-surface: #161b22;
-  --color-text: #e6f2ff;
-  --color-text-muted: #8b949e;
-  --color-accent: #ff006e;
-  --color-border: #30363d;
-  --font-family-base: "Nintendo Switch", "Hiragino Kaku Gothic ProN", sans-serif;
-  --radius-base: 8px;
-  --spacing-unit: 10px;
+  --color-background: #fef5f0;
+  --color-surface: #fce8dd;
+  --color-text: #5a3a2a;
+  --color-text-muted: #8b6f63;
+  --color-accent: #d4845c;
+  --color-border: #f0d4c4;
+  --font-family-base: "Georgia", "Hiragino Mincho ProN", serif;
+  --radius-base: 12px;
+  --spacing-unit: 14px;
   --layout-align: center;
   --font-size-base: 16px;
-  --line-height-base: 1.6;
-  --container-width: 1080px;
-  --grid-columns: 4;
+  --line-height-base: 1.8;
+  --container-width: 900px;
+  --grid-columns: 2;
 }
