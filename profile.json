@@ -39,9 +39,9 @@
     },
     {
       "name": "Diary",
-      "generatedText": "",
+      "generatedText": "日記を管理するプログラム。",
       "appealText": "",
-      "sourceHash": ""
+      "sourceHash": "cac6caded51d952ce9cc79321144a0efd4d035443b52ca71fea5b26e07b2ba03"
     },
     {
       "name": "oop2_practice",
